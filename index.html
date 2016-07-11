@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Presentation</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/presentation.css">
+</head>
+
+<body
+    @keyup.left="prev"
+    @keyup.right="next"
+>
+    <!-- header -->
+    <header class="header">
+        <a id="logo"
+            @click="current = 1"
+        >
+            <img src="assets/img/vue-logo.png">
+            <span>Vue.js</span>
+        </a>
+
+        <p id="pages">
+            <span @click="prev"> < </span>
+            <span>{{ current }} / {{ slideQty }}</span>
+            <span @click="next"> > </span>
+        </p>
+    </header>
+
+    <!-- slides -->
+    <slide class="center">
+        <img src="assets/img/vue-logo.png" width="250">
+        <h1 class="fw-normal fs-3em">Vue.js</h1>
+        <h3 class="fw-normal">Reactive Components for Modern Web Interfaces</h3>
+    </slide>
+
+    <slide>
+        <h1>Vue.js != full-blown framework</h1>
+        <p>Vue.js não é um framework completo, seu foco é somente a camada de view</p>
+        <ul>
+            <li>Fácil de ser implementado com outras bibliotecas ou projetos existentes</li>
+            <li>Quando usado com ferramentas adequadas e bibliotecas de suporte, também é capaz de surportar sofisticadas aplicações de uma página (Single Page Application, SPA)</li>
+        </ul>
+    </slide>
+
+    <slide class="center">
+        <h1>MVVM (Model - ViewModel - Model)</h1>
+        <img src="assets/img/mvvm.png" width="700">
+    </slide>
+
+    <slide>
+        <h1>Porque Vue.js e não Angular?</h1>
+        <ul>
+            <li>Simples</li>
+            <li>Mais flexível</li>
+            <li>Separações mais claras entre diretivas e componentes</li>
+            <li>
+                <b>Melhor performance</b>
+                <ul>
+                    <li>Não utiliza Dirty Checking (Digest cycle)</li>
+                    <li>Utiliza accessors (getters and setters)</li>
+                </ul>
+            </li>
+        </ul>
+    </slide>
+
+    <slide>
+        <h1>Objetivo</h1>
+        <ul>
+            <li>Reactive data binding</li>
+            <li>Component System</li>
+        </ul>
+    </slide>
+
+    <slide class="center">
+        <h1>O que é programação reativa?</h1>
+    </slide>
+
+    <slide>
+        <h1>Programação reativa</h1>
+        <p>Baseia-se em fluxos de dados e na propagação de mudanças, assíncronos e não-bloqueantes</p>
+        <ul>
+            <li>Reagir a eventos - <small>a natureza de ser orientada a eventos permite as demais qualidades</small></li>
+            <li>Reagir a cargas - <small>foco na escalabilidade ao invés de performance voltada a um usuário apenas</small></li>
+            <li>Reagir a falhas - <small>ser resiliente com a capacidade de recuperação em todos os níveis</small></li>
+            <li>Reagir aos usuários - <small>combinar as características acima para proporcionar uma experiência de usuário interativa</small></li>
+        </ul>
+        <small>Combinação de sistemas concorrentes, sistemas orientados a eventos e sistemas assíncronos</small>
+    </slide>
+
+    <slide>
+        <h1>Reactive data binding</h1>
+        <ul>
+            <li>Mantem seus dados e o DOM em sincronia</li>
+            <li>Jquery é imperativo, repetitivo e propenso a erros</li>
+            <li>Sintaxe especial para bind</li>
+            <li>Código mais fácil de escrever, entender e fazer manutenção</li>
+        </ul>
+    </slide>
+
+    <slide class="center">
+        <h1>Reactive data binding (Exemplo)</h1>
+        <img src="assets/img/codes/hello-vuejs.png">
+    </slide>
+
+    <slide class="center">
+        <h1>Component System</h1>
+        <img src="assets/img/components.png" width="700">
+    </slide>
+
+    <slide class="center">
+        <h1>Component System (Exemplo)</h1>
+        <img src="assets/img/codes/component-example.png">
+    </slide>
+
+    <slide class="center">
+        <h1>Data Binding Syntax</h1>
+    </slide>
+
+    <slide class="center">
+        <p>Interpolations</p>
+        <img src="assets/img/codes/interpolation.png">
+        <p>Filters</p>
+        <img src="assets/img/codes/filter.png">
+    </slide>
+
+    <slide>
+        <h1>Directives</h1>
+        <p>São atributos especiais com o prefixo v-</p>
+        <img src="assets/img/codes/v-if.png">
+        <p>v-if, por exemplo, remove ou insere a tag p baseado no valor da expressão</p>
+    </slide>
+
+    <slide>
+        <h1>Directives / Arguments</h1>
+        <p>Algumas diretivas podem receber argumentos</p>
+        <img src="assets/img/codes/v-bind.png">
+        <p>Shorthand: :attr</p>
+        <img src="assets/img/codes/v-on.png">
+        <p>Shorthand: @action</p>
+    </slide>
+
+    <slide class="center">
+        <h1>Computed properties</h1>
+        <img src="assets/img/codes/computed.png">
+    </slide>
+
+    <slide class="center">
+        <h1>Conditional Rendering</h1>
+        <img src="assets/img/codes/conditional-1.png"><br>
+        <img src="assets/img/codes/conditional-2.png"><br>
+        <img src="assets/img/codes/conditional-3.png"><br>
+    </slide>
+
+    <slide>
+        <h1>v-show versus v-if</h1>
+        <img src="assets/img/codes/v-show.png">
+        <p>O elemento é compilado e preservado, o v-show simplesmente utiliza uma troca de display, block ou hidden, no CSS.</p>
+    </slide>
+
+    <slide class="center">
+        <h1>List Rendering</h1>
+        <img src="assets/img/codes/v-for.png">
+    </slide>
+
+    <slide class="center">
+        <h1>Methods</h1>
+        <img src="assets/img/codes/methods.png">
+    </slide>
+
+    <slide class="center">
+        <h1>Event Modifiers</h1>
+        <img src="assets/img/codes/event.png">
+    </slide>
+
+    <slide class="center">
+        <h1>Key Modifiers</h1>
+        <img src="assets/img/codes/key-1.png"><br>
+        <img src="assets/img/codes/key-2.png">
+        <p>Existem algumas aliases já prontas</p>
+        <p>enter, tab, delete, esc, space, up, down, left, right</p>
+    </slide>
+
+    <slide class="center">
+        <h1>Form input bindings</h1>
+        <img src="assets/img/codes/form-1.png"><br>
+        <p>Param Attributes</p>
+        <p>lazy, number, debounce</p>
+    </slide>
+
+    <slide class="center">
+        <h1>Components</h1>
+        <img src="assets/img/codes/component.png"><br>
+    </slide>
+
+    <slide class="center">
+        <h1>Components / Props</h1>
+        <img src="assets/img/codes/props.png"><br>
+        <img src="assets/img/codes/prop-binding.png">
+    </slide>
+
+    <slide class="center">
+        <h1>Components / Slot</h1>
+        <img src="assets/img/codes/slot.png"><br>
+    </slide>
+
+    <slide class="center">
+        <h1>Custom Directives</h1>
+        <img src="assets/img/codes/directive.png"><br>
+    </slide>
+
+    <slide class="center">
+        <h1>Custom Filters</h1>
+        <img src="assets/img/codes/custom-filter.png"><br>
+    </slide>
+
+    <slide class="center">
+        <h1>Obrigado!</h1>
+        <a href="https://github.com/wesleyhf">github.com/wesleyhf</a>
+    </slide>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="progress-bar">
+            <div class="bar" :style="{ width: getProgress() + '%' }"></div>
+        </div>
+    </footer>
+
+    <!-- template -->
+    <template id="slide-template">
+        <div class="slide"
+            v-show="index == $parent.current"
+            transition="fade"
+            transition-mode="out-in"
+        >
+            <div class="slide-content">
+                <slot>
+                    <h1>I'm a beautiful slide</h1>
+                </slot>
+            </div>
+        </div>
+    </template>
+
+    <script src="assets/js/vue.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
