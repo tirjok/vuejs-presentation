@@ -37,10 +37,10 @@
 
     <slide>
         <h1>Vue.js != full-blown framework</h1>
-        <p>Vue.js não é um framework completo, seu foco é somente a camada de view</p>
+        <p>Vue.js is not a complete framework, its focus is only the view layer</p>
         <ul>
-            <li>Fácil de ser implementado com outras bibliotecas ou projetos existentes</li>
-            <li>Quando usado com ferramentas adequadas e bibliotecas de suporte, também é capaz de surportar sofisticadas aplicações de uma página (Single Page Application, SPA)</li>
+            <li>Easy to implement with other libraries or existing projects</li>
+            <li>When used with appropriate tools and support libraries, it is also capable of supporting sophisticated one-page applications (Single Page Application, SPA)</li>
         </ul>
     </slide>
 
@@ -50,23 +50,23 @@
     </slide>
 
     <slide>
-        <h1>Porque Vue.js e não Angular?</h1>
+        <h1>Why Vue.js and not Angular?</h1>
         <ul>
             <li>Simples</li>
-            <li>Mais flexível</li>
-            <li>Separações mais claras entre diretivas e componentes</li>
+            <li>More Flexible</li>
+            <li>Clearer separations between directives and components</li>
             <li>
-                <b>Melhor performance</b>
+                <b>Best performance</b>
                 <ul>
-                    <li>Não utiliza Dirty Checking (Digest cycle)</li>
-                    <li>Utiliza accessors (getters and setters)</li>
+                    <li>Do not use Dirty Checking(Digest cycle)</li>
+                    <li>Utilize accessors (getters and setters)</li>
                 </ul>
             </li>
         </ul>
     </slide>
 
     <slide>
-        <h1>Objetivo</h1>
+        <h1>Goal</h1>
         <ul>
             <li>Reactive data binding</li>
             <li>Component System</li>
@@ -74,33 +74,33 @@
     </slide>
 
     <slide class="center">
-        <h1>O que é programação reativa?</h1>
+        <h1>What is reactive programming?</h1>
     </slide>
 
     <slide>
-        <h1>Programação reativa</h1>
-        <p>Baseia-se em fluxos de dados e na propagação de mudanças, assíncronos e não-bloqueantes</p>
+        <h1>Reactive programming</h1>
+        <p>It is based on data flows and the propagation of changes, asynchronous and non-blocking</p>
         <ul>
-            <li>Reagir a eventos - <small>a natureza de ser orientada a eventos permite as demais qualidades</small></li>
-            <li>Reagir a cargas - <small>foco na escalabilidade ao invés de performance voltada a um usuário apenas</small></li>
-            <li>Reagir a falhas - <small>ser resiliente com a capacidade de recuperação em todos os níveis</small></li>
-            <li>Reagir aos usuários - <small>combinar as características acima para proporcionar uma experiência de usuário interativa</small></li>
+            <li>React to events - <small>The nature of being event-oriented allows the other qualities</small></li>
+            <li>React to loads - <small>Focus on scalability rather than performance targeting a single user</small></li>
+            <li>Reacting to faults - <small>Be resilient with the ability to recover at all levels</small></li>
+            <li>React to users - <small>Combine the above features to provide an interactive user experience</small></li>
         </ul>
-        <small>Combinação de sistemas concorrentes, sistemas orientados a eventos e sistemas assíncronos</small>
+        <small>Combination of competing systems, event-oriented systems and asynchronous systems</small>
     </slide>
 
     <slide>
         <h1>Reactive data binding</h1>
         <ul>
-            <li>Mantem seus dados e o DOM em sincronia</li>
-            <li>Jquery é imperativo, repetitivo e propenso a erros</li>
-            <li>Sintaxe especial para bind</li>
-            <li>Código mais fácil de escrever, entender e fazer manutenção</li>
+            <li>Keeps your data and the DOM in sync</li>
+            <li>jQuery is imperative, repetitive and prone to errors</li>
+            <li>Special syntax for bind</li>
+            <li>Easier to write, understand and maintain code</li>
         </ul>
     </slide>
 
     <slide class="center">
-        <h1>Reactive data binding (Exemplo)</h1>
+        <h1>Reactive data binding (Example)</h1>
         <img src="assets/img/codes/hello-vuejs.png">
     </slide>
 
@@ -110,7 +110,7 @@
     </slide>
 
     <slide class="center">
-        <h1>Component System (Exemplo)</h1>
+        <h1>Component System (Exemple)</h1>
         <img src="assets/img/codes/component-example.png">
     </slide>
 
@@ -127,14 +127,14 @@
 
     <slide>
         <h1>Directives</h1>
-        <p>São atributos especiais com o prefixo v-</p>
+        <p>Special attributes with the prefix v-</p>
         <img src="assets/img/codes/v-if.png">
-        <p>v-if, por exemplo, remove ou insere a tag p baseado no valor da expressão</p>
+        <p>v-if, For example, removes or inserts the p-tag based on the value of the expression</p>
     </slide>
 
     <slide>
         <h1>Directives / Arguments</h1>
-        <p>Algumas diretivas podem receber argumentos</p>
+        <p>Some policies may receive arguments</p>
         <img src="assets/img/codes/v-bind.png">
         <p>Shorthand: :attr</p>
         <img src="assets/img/codes/v-on.png">
@@ -154,9 +154,9 @@
     </slide>
 
     <slide>
-        <h1>v-show versus v-if</h1>
+        <h1>v-show vs v-if</h1>
         <img src="assets/img/codes/v-show.png">
-        <p>O elemento é compilado e preservado, o v-show simplesmente utiliza uma troca de display, block ou hidden, no CSS.</p>
+        <p>The element is compiled and preserved, the v-show simply uses a display, block, or hidden exchange in CSS.</p>
     </slide>
 
     <slide class="center">
@@ -178,7 +178,7 @@
         <h1>Key Modifiers</h1>
         <img src="assets/img/codes/key-1.png"><br>
         <img src="assets/img/codes/key-2.png">
-        <p>Existem algumas aliases já prontas</p>
+        <p>There are some aliases already ready</p>
         <p>enter, tab, delete, esc, space, up, down, left, right</p>
     </slide>
 
@@ -216,8 +216,8 @@
     </slide>
 
     <slide class="center">
-        <h1>Obrigado!</h1>
-        <a href="https://github.com/wesleyhf">github.com/wesleyhf</a>
+        <h1>Thankyou!</h1>
+        <a href="https://github.com/tirjok">github.com/tirjok</a>
     </slide>
 
     <!-- footer -->
